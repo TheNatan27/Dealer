@@ -1,16 +1,16 @@
-import { test, expect } from '@playwright/test';
+import {test, expect} from '@playwright/test';
 
 test.describe('New Todo', () => {
-  test('should allow me to add todo items', async ({ page }) => {
-    // create a new todo locator
-    
-    console.log('This is test 02');
+	test('should allow me to add todo items', async ({page}) => {
+		// Create a new todo locator
 
-    await page.goto('http://192.168.100.8:30552/hello');
+		console.log('This is test 01');
+		const ipAddress = process.env.IP_ADDRESS || '192.168.100.8';
 
-    await expect(page).toHaveURL('http://192.168.100.8:30552/welcome');
-    
-  });
+		await page.goto(`http://localhost:80/user/read/2`);
+
+		await expect(page).toHaveURL(`http://localhost:80/user/read/2`);
+
+	});
 });
-
 

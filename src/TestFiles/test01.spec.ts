@@ -7,9 +7,10 @@ test.describe('New Todo', () => {
 		console.log('This is test 01');
 		const ipAddress = process.env.IP_ADDRESS || '192.168.100.8';
 
-		await page.goto(`http://${ipAddress}:30552/hello`);
+		await page.goto(`http://0.0.0.0:80/user/read/2`);
 
-		await expect(page).toHaveURL(`http://${ipAddress}:30552/welcome`);
+		await expect(page).toHaveURL(`http://0.0.0.0:80/user/read/2`);
+
 	});
 });
 

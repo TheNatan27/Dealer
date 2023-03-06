@@ -47,6 +47,20 @@ export class MockDatabase {
 		return cardsList;
 	}
 
+	public async startGameDev(): Promise<string> {
+		const TestCollection = await this.generateCollectionDev();
+		this.testCollections.push(TestCollection);
+		return TestCollection.gameId;
+	}
+	private async generateCollectionDev(): Promise<TestCollection> {
+		const cardList: TestCard[] = await this.generateCards();
+		const gameId: string = 'testgameid123';
+		const testCollection = new TestCollection(gameId, cardList);
+		return testCollection;
+	}
+
+
+
 }
 
 	/**

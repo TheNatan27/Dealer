@@ -37,6 +37,17 @@ export class MockDatabase {
         cardsList.push({ name: 'test05', script: './src/TestFiles/test05.spec.ts', state: TestState.Ready });
         return cardsList;
     }
+    async startGameDev() {
+        const TestCollection = await this.generateCollectionDev();
+        this.testCollections.push(TestCollection);
+        return TestCollection.gameId;
+    }
+    async generateCollectionDev() {
+        const cardList = await this.generateCards();
+        const gameId = 'testgameid123';
+        const testCollection = new TestCollection(gameId, cardList);
+        return testCollection;
+    }
 }
 /**
  * Drawing mechanism

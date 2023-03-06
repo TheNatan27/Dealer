@@ -10,6 +10,8 @@ import { TestCard } from './TestCard.js';
 const endpoint = express();
 const backendPort = process.env.BACKEND_PORT || '30552';
 const backendIp = process.env.BACKEND_PORT || ip.address();
+
+const singelGameID = 'testgameid123';
     
 const storage = multer.diskStorage({
     destination(req, file, callback) {
@@ -48,3 +50,14 @@ endpoint.post('/reveal-card/:gameID', upload.single('result' as string), async (
 endpoint.listen(backendPort, () => {
     console.log(`Log: server running at http://${backendIp}:${backendPort}`);
 })    
+
+
+endpoint.post('/startgame-dev', async (request, response) => {
+    const gameId = await mockDatabase.startGameDev();
+    response.json({'gameID': gameId});
+});
+endpoint.get('/download/:gameID', async (request, response) => {
+    const testCard = await mockDatabase.drawTestCard(request.params.gameID);
+    response.download(testCard.script);
+    console.log(`Log: ${testCard.name} drawn`);
+});

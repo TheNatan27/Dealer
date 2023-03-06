@@ -1,0 +1,127 @@
+{
+  "config": {
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {},
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/WORKPLAYER/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "C:/WORKPLAYER/src/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/?(*.)@(spec|test).*"
+        ],
+        "timeout": 3000000
+      }
+    ],
+    "reporter": [
+      [
+        "json",
+        {
+          "outputFile": "./result/jres.json"
+        }
+      ],
+      [
+        "list",
+        null
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 15000
+    },
+    "configFile": "C:\\WORKPLAYER\\playwright.config.ts",
+    "rootDir": "C:/WORKPLAYER/src/tests",
+    "quiet": false,
+    "shard": null,
+    "updateSnapshots": "missing",
+    "version": "1.30.0",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "test.spec.ts",
+      "file": "test.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "New Todo",
+          "file": "test.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should allow me to add todo items",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 3000000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "status": "failed",
+                      "duration": 6301,
+                      "error": {
+                        "message": "\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected string: \u001b[32m\"http://192.168.100.8:30552/\u001b[7mwelcome\u001b[27m\"\u001b[39m\nReceived string: \u001b[31m\"http://192.168.100.8:30552/\u001b[7mhello\u001b[27m\"\u001b[39m\nCall log:\n  \u001b[2m- expect.toHaveURL with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator(':root')\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"http://192.168.100.8:30552/hello\"\u001b[22m\n\u001b[2m  - waiting for locator(':root')\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"http://192.168.100.8:30552/hello\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"http://192.168.100.8:30552/hello\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"http://192.168.100.8:30552/hello\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"http://192.168.100.8:30552/hello\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"http://192.168.100.8:30552/hello\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"http://192.168.100.8:30552/hello\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"http://192.168.100.8:30552/hello\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"http://192.168.100.8:30552/hello\"\u001b[22m\n",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected string: \u001b[32m\"http://192.168.100.8:30552/\u001b[7mwelcome\u001b[27m\"\u001b[39m\nReceived string: \u001b[31m\"http://192.168.100.8:30552/\u001b[7mhello\u001b[27m\"\u001b[39m\nCall log:\n  \u001b[2m- expect.toHaveURL with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator(':root')\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"http://192.168.100.8:30552/hello\"\u001b[22m\n\u001b[2m  - waiting for locator(':root')\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"http://192.168.100.8:30552/hello\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"http://192.168.100.8:30552/hello\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"http://192.168.100.8:30552/hello\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"http://192.168.100.8:30552/hello\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"http://192.168.100.8:30552/hello\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"http://192.168.100.8:30552/hello\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"http://192.168.100.8:30552/hello\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"http://192.168.100.8:30552/hello\"\u001b[22m\n\n    at C:\\WORKPLAYER\\src\\tests\\test.spec.ts:11:24"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\WORKPLAYER\\src\\tests\\test.spec.ts",
+                            "column": 24,
+                            "line": 11
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoHaveURL\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected string: \u001b[32m\"http://192.168.100.8:30552/\u001b[7mwelcome\u001b[27m\"\u001b[39m\nReceived string: \u001b[31m\"http://192.168.100.8:30552/\u001b[7mhello\u001b[27m\"\u001b[39m\nCall log:\n  \u001b[2m- expect.toHaveURL with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator(':root')\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"http://192.168.100.8:30552/hello\"\u001b[22m\n\u001b[2m  - waiting for locator(':root')\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"http://192.168.100.8:30552/hello\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"http://192.168.100.8:30552/hello\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"http://192.168.100.8:30552/hello\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"http://192.168.100.8:30552/hello\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"http://192.168.100.8:30552/hello\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"http://192.168.100.8:30552/hello\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"http://192.168.100.8:30552/hello\"\u001b[22m\n\u001b[2m  -   locator resolved to <html lang=\"en\">…</html>\u001b[22m\n\u001b[2m  -   unexpected value \"http://192.168.100.8:30552/hello\"\u001b[22m\n\n\n\u001b[90m   at \u001b[39mtest.spec.ts:11\n\n   9 |     await page.goto('http://192.168.100.8:30552/hello');\n  10 |\n> 11 |     await expect(page).toHaveURL('http://192.168.100.8:30552/welcome');\n     |                        ^\n  12 |     \n  13 |   });\n  14 | });\n\n\u001b[2m    at C:\\WORKPLAYER\\src\\tests\\test.spec.ts:11:24\u001b[22m"
+                        }
+                      ],
+                      "stdout": [
+                        {
+                          "text": "This is test 03\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2023-03-06T01:29:20.250Z",
+                      "attachments": [],
+                      "errorLocation": {
+                        "file": "C:\\WORKPLAYER\\src\\tests\\test.spec.ts",
+                        "column": 24,
+                        "line": 11
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "b72ba50710186a3d173d-e61813af1f51d841cc26",
+              "file": "test.spec.ts",
+              "line": 4,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": []
+}
